@@ -1,11 +1,10 @@
 <!--**ghwosty/ghwosty** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
-  <br>
-  
   Hi, I'm [@ghwosty](https://github.com/ghwosty).
   - I use Java, HTML, JS, CSS, and Python.
   - I like to work on projects with other people
   - Currently working on an important project with friends (repo private, https://codestack.ga)
 
+  https://ghwosty.com
 <details>
 <summary>Github Language Breakdown</summary>
 <br>
