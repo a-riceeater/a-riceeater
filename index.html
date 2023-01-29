@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghwosty</title>
     <link rel="shortcut icon" href="ghwosty.jpg">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <div class="topBar"></div>
+    <div class="topBar">
+        <div id="container1">
+            <span id="titleUrl" onclick="window.location = 'http://ghwosty.com'">ghwosty.com</span>
+            <span class="topBarOption">Languages</span>
+            <span class="topBarOption">Contact</span>
+            <span class="topBarOption">Project</span>
+            <span class="topBarOption">Organizations</span>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => document.querySelector('#container1').style.width = "100%", 100)
+    </script>
 </body>
 </html>
