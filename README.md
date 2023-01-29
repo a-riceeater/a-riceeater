@@ -4,7 +4,7 @@
   Hi, I'm [@ghwosty](https://github.com/ghwosty).
   - I use Java, HTML, JS, CSS, and Python.
   - I like to work on projects with other people
-  - Currently working on an important project with friends
+  - Currently working on an important project with friends (repo private, https://codestack.ga)
 
 <details>
 <summary>Github Language Breakdown</summary>
