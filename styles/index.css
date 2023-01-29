@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Noto%20Sans");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+:root {
+    --bg: #3a3b3a;
+    --tobarBg: #aa6337;
+    --poppins: 'Poppins', serif;
+    --notosans: 'Noto Sans', serif;
+}
