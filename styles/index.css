@@ -66,3 +66,7 @@ body {
     font-family: var(--notosans);
     color: rgb(0, 119, 255);
 }
+
+.selectedOption {
+    color: rgb(0, 119, 255);
+}
