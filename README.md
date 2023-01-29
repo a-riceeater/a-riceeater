@@ -4,7 +4,7 @@
   - I like to work on projects with other people
   - Currently working on an important project with friends (repo private, https://codestack.ga)
 
-  https://ghwosty.com
+  http://ghwosty.com
 <details>
 <summary>Github Language Breakdown</summary>
 <br>
