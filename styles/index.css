@@ -22,7 +22,6 @@ body {
     height: 55px;
     border-bottom: 1px solid black;
     padding-left: 15px;
-    overflow-x: hidden;
 }
 
 #titleUrl {
@@ -68,4 +67,17 @@ body {
 
 .selectedOption {
     color: rgb(0, 119, 255);
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+.right {
+    right: 0%;
+}
+
+.absolute {
+    position: absolute;
 }
