@@ -9,7 +9,7 @@
 <summary>Github Language Breakdown</summary>
 <br>
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ghwosty&theme=tokyonight)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=a-riceeater&theme=tokyonight)
 
 </details>
 
@@ -17,7 +17,7 @@
 <summary>Github Stats</summary>
 <br>
 
-![](https://github-readme-stats.vercel.app/api?username=ghwosty&hide=stars&count_private=true&show_icons=true&theme=tokyonight)
+![](https://github-readme-stats.vercel.app/api?username=a-riceeater&hide=stars&count_private=true&show_icons=true&theme=tokyonight)
 
 </details>
 
