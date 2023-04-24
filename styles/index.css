@@ -13,6 +13,7 @@
     font-family: cursor, monospace;
     padding-left: 15px;
     padding-top: 10px;
+    overflow-y: scroll;
 }
 
 .user-identify {
@@ -22,9 +23,14 @@
 #user-input {
     width: 80%;
     background-color: transparent;
+    display: inline-block;
     border: transparent;
     outline: 0;
     font-size: 17px;
     font-family: cursor, monospace;
     color: rgb(134, 234, 212);
+}
+
+.cmd-err {
+    color: red;
 }

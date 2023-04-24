@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,17 @@
     <title>ghwosty/a-riceeater</title>
     <link rel="stylesheet" href="./styles/index.css">
 </head>
+
 <body>
     <div id="terminal">
         <p class="dft-term-text">Welcome to ghwosty.com</p>
-        <p class="user-identify">
-            user@ghwosty.com:$ ~
-            <span contenteditable="true" id="user-input" autofocus="true"></span>
+        <p class="user-identify" id="uidMain">
+            <span>user@ghwosty.com:$ ~ </span>
+            <input id="user-input" autofocus="true" type="text">
         </p>
     </div>
     <script src="./scripts/commands.js"></script>
     <script src="./scripts/main.js" type="module"></script>
 </body>
+
 </html>
