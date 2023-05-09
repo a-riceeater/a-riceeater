@@ -18,9 +18,20 @@ userInput.addEventListener("keydown", (e) => {
         }
 
         try {
-            if (cmds.commands.includes(userInput.value)) {
+            if (cmds.commands.includes(userInput.value) || userInput.value.startsWith("search ")) {
                 // handle command
-                wl(cmds[userInput.value], 'dft-term-text', userInput.value)
+
+                if (userInput.value.split(" ")[0] == 'search') {
+                    fetch(`https://serpapi.com/search.json?engine=google&q=${userInput.value.replace("search ", "")}`)
+                        .then((data) => {
+                            wl(JSON.stringify(data), "dft-term-text", "search")
+                        })
+                        .catch((err) => {
+                            alert(err);
+                            wl(err.toString(), "cmd-err", userInput.value)
+                        })
+                }
+                else wl(cmds[userInput.value], 'dft-term-text', userInput.value)
             } else {
                 // throw error
                 wl(`system: $ command \"${userInput.value}\" not found`, "cmd-err", userInput.value)
@@ -33,7 +44,7 @@ userInput.addEventListener("keydown", (e) => {
     }
 
     setTimeout(() => {
-        if (!cmds.commands.includes(userInput.value) && userInput.value) userInput.style.color = "red"
+        if (!cmds.commands.includes(userInput.value) && userInput.value && !userInput.value.startsWith("search ")) userInput.style.color = "red"
         else userInput.style.color = 'rgb(134, 234, 212)'
     })
 })
