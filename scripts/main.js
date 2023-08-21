@@ -21,17 +21,14 @@ userInput.addEventListener("keydown", (e) => {
             if (cmds.commands.includes(userInput.value) || userInput.value.startsWith("search ")) {
                 // handle command
 
-                if (userInput.value.split(" ")[0] == 'search') {
-                    fetch(`https://serpapi.com/search.json?engine=google&q=${userInput.value.replace("search ", "")}`)
-                        .then((data) => {
-                            wl(JSON.stringify(data), "dft-term-text", "search")
-                        })
-                        .catch((err) => {
-                            alert(err);
-                            wl(err.toString(), "cmd-err", userInput.value)
-                        })
+                switch (userInput.value.split(" ")[0]) {
+                    case "github":
+                        wl(cmds[userInput.value], 'dft-term-text', userInput.value);
+                        window.open("https://github.com/a-riceeater");
+                        break;
+                    default:
+                        wl(cmds[userInput.value], 'dft-term-text', userInput.value);
                 }
-                else wl(cmds[userInput.value], 'dft-term-text', userInput.value)
             } else {
                 // throw error
                 wl(`system: $ command \"${userInput.value}\" not found`, "cmd-err", userInput.value)
@@ -66,7 +63,7 @@ function wl(message, cl, command) {
 
     terminal.append(uid)
 
-    const m = document.createElement(command == 'banner' || command == 'help' ? 'pre' : 'p')
+    const m = document.createElement(cmds.preCmds.includes(command) ? 'pre' : 'p')
     m.classList.add(cl)
     terminal.appendChild(m);
 
@@ -82,7 +79,7 @@ function wl(message, cl, command) {
     function write() {
         m.innerHTML += interval == 1 ? message.charAt(i) + message.charAt(i + 1) : message.charAt(i)
         if (i < message.length) {
-            interval == 1 ? i += 2 : i++; 
+            interval == 1 ? i += 2 : i++;
             setTimeout(write, interval)
         }
     }
@@ -92,10 +89,10 @@ function wl(message, cl, command) {
 
     terminal.appendChild(document.getElementById("uidMain"));
     userInput.focus();
-    
+
     terminal.scrollBottom();
 }
 
 function getRand(min, max) {
     return Math.random() * (max - min) + min;
-  }
+}
