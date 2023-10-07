@@ -46,11 +46,8 @@ userInput.addEventListener("keydown", (e) => {
     })
 })
 
-Object.prototype.scrollBottom = function () {
-    const scrollToBottom = (node) => {
-        node.scrollTop = node.scrollHeight;
-    }
-    scrollToBottom(this)
+HTMLElement.prototype.scrollBottom = function () {
+    this.scrollTop = this.scrollHeight;
 }
 
 function wl(message, cl, command) {
@@ -89,11 +86,13 @@ function wl(message, cl, command) {
         function urlify(text) {
             var urlRegex = /(https?:\/\/[^\s]+)/g;
             return text.replace(urlRegex, function (url) {
-                return '<a href="' + url + '">' + url + '</a>';
+                return '<a target="_blank" href="' + url.replace(")", "") + '">' + url + '</a>';
             })
         }
 
         m.innerHTML = urlify(mr);
+
+        terminal.scrollBottom();
     }
     write();
 
