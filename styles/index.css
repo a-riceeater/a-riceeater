@@ -34,3 +34,12 @@
 .cmd-err {
     color: red;
 }
+
+a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

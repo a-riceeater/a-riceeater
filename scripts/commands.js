@@ -31,5 +31,9 @@ Important projects:
 Codestack (http://codestack.ga [domain down]) - Made with friends, a web app for developers to buy libraries, API access, etc
 Versa - (https://github.com/a-riceeater/Versa) - Made by myself (read github for info)
 
-<a href="http://ghwosty.com">http://ghwosty.com</a>
+http://ghwosty.com
+`
+
+export const projects = `
+Versa - 
 `

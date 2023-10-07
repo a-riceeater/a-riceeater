@@ -81,7 +81,19 @@ function wl(message, cl, command) {
         if (i < message.length) {
             interval == 1 ? i += 2 : i++;
             setTimeout(write, interval)
+            return
         }
+
+        let mr = message;
+
+        function urlify(text) {
+            var urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlRegex, function (url) {
+                return '<a href="' + url + '">' + url + '</a>';
+            })
+        }
+
+        m.innerHTML = urlify(mr);
     }
     write();
 
