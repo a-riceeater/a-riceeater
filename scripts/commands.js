@@ -40,9 +40,11 @@ export const projects = `
 <br><br>
 <u>Rel</u> - An attempt to make a programming in Node.js without a lexer/parser/etc (https://github.com/a-riceeater/rel)
 <br><br>
-<u>Umbrella</u> - A web service consisting of docs, file storage/transfer, "payment" app (not real currency yet), password manager, and SSO (https://github.com/a-riceeater/Umbrella)
+<u>Umbrella</u> - A web service consisting of docs, file storage/transfer, "payment" app (not real currency yet), password manager, and SSO (https://github.com/a-riceeater/Umbrella) (privated)
 <br><br>
 <u>UBConsole</u> - An unblocked console that has almost the same functions as your average chrome browser one, which can be injected via bookmarklet (https://github.com/a-riceeater/UBConsole)
 <br><br>
 <u>SyntaxHighlight.js</u> - A JS syntax highlight library, which can highlight a few languages (https://github.com/a-riceeater/SyntaxHiglight.js)
+<br><br>
+<u>2DGame.js</u> - A simple 2D game engine for javascript (https://github.com/a-riceeater/2DGame.js)
 `
