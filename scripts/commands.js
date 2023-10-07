@@ -56,5 +56,5 @@ export const projects = `
 <br><br>
 <u>QOL BetterDiscord Plugin</u> - A BetterDiscord plugin that combines many QOL plugins into one (https://github.com/a-riceeater/QOL-BetterDiscord-Plugin)
 <br><br>
-<u>Forge</u> - (h(ttps://github.com/a-riceeater/Forge)
+<u>Forge</u> - (https://github.com/a-riceeater/Forge)
 `
