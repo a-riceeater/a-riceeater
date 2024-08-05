@@ -70,12 +70,21 @@ html {
 
 .hc-socials {
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hcs-link > svg {
     height: 35px;
     width: 35px;
     fill: lightgray;
+}
+
+.hcs-link {
+    text-decoration: none;
+    color: transparent;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .hc-about-btn {
@@ -89,6 +98,8 @@ html {
     color: lightgray;
     margin-top: 10px;
     font-family: "Work Sans", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-container {
@@ -203,4 +214,48 @@ html {
 .ft-link {
     color: lightgray;
     font-size: 14px;
+}
+
+.sticky-top {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 60vh;
+    height: 55px;
+    border: 1px solid var(--accent);
+    border-radius: 50px / 50px;
+    background-color: #ffffff1f;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.st-text {
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: lightgray;
+    text-decoration: none;
+}
+
+.st-text > svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: rgb(233, 204, 149)
+}
+
+.st-text > span {
+    vertical-align: middle;
+}
+
+#hc-down {
+    height: 25px;
+    fill: lightgray;
+    margin-top: 25px;
 }
