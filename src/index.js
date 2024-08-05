@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'index.html'));
 })
 
+app.get("/license", (req, res) => {
+    
+})
+
 app.listen(7076, () => {
     console.log('Listening on 7076')
 })

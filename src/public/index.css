@@ -93,10 +93,10 @@ html {
 
 .about-container {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 150px;
+    padding-top: 130px;
     position: relative;
 }
 
@@ -124,11 +124,62 @@ html {
 
 @media (max-width: 480px) {
     .about-container {
-        height: 100vh !important;
-        padding-top: 90px;
+        height: 115vh !important;
+        padding-top: 40px;
     }
 
     .ac-text {
         max-width: 80% !important;
     }
+}
+
+.ac-text.top-margin {
+    margin-top: 20px;
+}
+
+.act-svg {
+    height: 20px;
+    width: 20px;
+    fill: rgb(233, 204, 149);
+    vertical-align: middle;
+}
+
+.act-sv-sp {
+    vertical-align: middle;
+    margin-left: 5px;
+    color: rgb(233, 204, 149);
+}
+
+.footer {
+    background-color: rgb(40, 40, 40);
+    height: 15vh;
+    width: 100%;
+    position: relative;
+    color: lightgray;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.ft-b {
+    background-color: black;
+    border-radius: 10px / 10px;
+    border: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ft-b > svg {
+    fill: lightgray;
+}
+
+.ft-link {
+    color: lightgray;
+    font-size: 14px;
 }
