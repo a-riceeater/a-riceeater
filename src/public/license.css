@@ -15,6 +15,7 @@ body {
     font-family: "Work Sans", sans-serif;
     scroll-behavior: smooth;
     text-align: center;
+    height: 100vh;
 }
 
 h1 {
@@ -87,5 +88,11 @@ h1 {
     }
     .ft-link {
         display: none;
+    }
+}
+
+@media (max-height: 880px) {
+    .footer {
+        display: none !important;
     }
 }
