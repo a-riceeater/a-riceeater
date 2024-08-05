@@ -142,6 +142,10 @@ html {
     .ac-text {
         max-width: 80% !important;
     }
+
+    .sticky-top {
+        width: 40vh !important;
+    }
 }
 
 @media (max-width: 350px) {
