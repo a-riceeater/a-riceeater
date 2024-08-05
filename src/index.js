@@ -3,6 +3,10 @@ const path = require('path');
 
 const app = express();
 
+app.get("/", (req, res) => {
+    res.send("Hello world")
+})
+
 app.listen(7076, () => {
     console.log('Listening on 7076')
 })
