@@ -16,7 +16,8 @@ document.querySelector("#h_close").addEventListener("click", () => {
 
 document.querySelector(".cc-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("form submitted")
+
+    if (document.querySelector(".ccf-send").classList.contains("disabled")) return
 
     const name = document.querySelector("#cc-name-inp").value.trim();
     const email = document.querySelector("#cc-email-inp").value.trim();
@@ -29,6 +30,8 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
         setTimeout(() => document.querySelector("#inv-field").classList.remove("bounceright"), 1000);
         return
     }
+
+    document.querySelector(".ccf-send").classList.add('disabled');
 
     fetch("/api/send-message", {
         method: "POST",
@@ -43,6 +46,8 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
     })
         .then((d) => d.json())
         .then((d) => {
+            document.querySelector(".ccf-send").classList.remove('disabled');
+
             if (!d.sent) {
                 document.querySelector("#rq-failed").classList.remove("hidden")
                 document.querySelector("#rq-failed").classList.add("bounceright")
@@ -56,6 +61,7 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
             document.querySelector("#rq-failed").classList.add("bounceright")
             document.querySelector("#inv-field").classList.add("hidden")
             setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
+            document.querySelector(".ccf-send").classList.remove('disabled');
             console.error(err)
         })
 })
