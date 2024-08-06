@@ -127,7 +127,7 @@ html {
     text-align: center;
     box-sizing: border-box;
     position: relative; 
-    background-color: #1c1c1c;
+    background-color: rgb(40, 40, 40);
     padding-top: 20px;
 }
 
@@ -204,6 +204,10 @@ html {
     #integration-sk {
         width: 100% !important;
     }
+
+    #integration-sk > h1 {
+        margin-right: 24px !important;
+    }
 }
 
 @media (max-width: 350px) {
@@ -237,7 +241,7 @@ html {
 }
 
 .footer {
-    background-color: rgb(40, 40, 40);
+    background-color: #1c1c1c;
     height: 15vh;
     width: 100%;
     position: relative;
@@ -258,19 +262,22 @@ html {
     background-color: black;
     border-radius: 10px / 10px;
     border: none;
-    height: 35px;
-    width: 35px;
+   
+    
+}
+
+.footer > p > a > svg {
+    fill: lightgray;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-.ft-b > svg {
-    fill: lightgray;
+    margin-top: -15px;
+    margin-bottom: 10px;
 }
 
 .ft-link {
@@ -415,5 +422,21 @@ html {
 #integration-sk > h1 {
     text-align: center !important;
     margin: 0;
-    margin-right: 24px;
+}
+
+.cc-t {
+    color: white;
+}
+
+.cc-t > svg {
+    vertical-align: middle;
+    height: 1.2em;
+    fill: white;
+    margin-right: 10px;
+}
+
+.cc-t > span {
+    vertical-align: middle;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue;
+    font-size: 28px;
 }
