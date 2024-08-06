@@ -317,3 +317,48 @@ html {
     transform: translate(-50%, 0%);
     border-radius: 10px / 10px;
 }
+
+.sk-sec {
+    width: 30%;
+    float: left;
+    display: grid;
+    justify-self: center;
+    margin-top: 20px;
+    height: 40%;
+}
+
+.sk-sec > h1 {
+    font-size: 20px;
+    color: rgb(233, 204, 149);
+    text-align: center;
+}
+
+.skills-container > #cont {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.sksec-title {
+    font-size: 16px;
+    color: lightgray;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.sksec-prog {
+    width: 70%;
+    height: 20px;
+    border-radius: 10px / 10px;
+    overflow: hidden;
+    background-color: var(--dimgray);
+    margin-left: 60px;
+}
+
+.sksec-prog > .fill {
+    background-color: var(--accent);
+    height: 100%;
+}
