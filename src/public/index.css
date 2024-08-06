@@ -146,6 +146,26 @@ html {
     .sticky-top {
         width: 40vh !important;
     }
+
+    #h_drop, #h_close {
+        display: block !important;
+    }
+
+    #h_drop.hidden, #h_close.hidden {
+        display: none !important;
+    }
+
+    .st-text {
+        display: none;
+    }
+
+    #mobile-fill {
+        display: block !important
+    }
+
+    .hidden {
+        display: none !important;
+    }
 }
 
 @media (max-width: 350px) {
@@ -262,4 +282,24 @@ html {
     height: 25px;
     fill: lightgray;
     margin-top: 25px;
+}
+
+#h_drop, #h_close {
+    display: none;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: rgb(233, 204, 149);
+    position: absolute;
+    right: 22px;
+}
+
+#mobile-fill {
+    display: none;
+    color: rgb(233, 204, 149);
+}
+
+.hidden {
+    display: none !important;
 }
