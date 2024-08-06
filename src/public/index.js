@@ -29,7 +29,7 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
         setTimeout(() => document.querySelector("#inv-field").classList.remove("bounceright"), 1000);
         return
     }
-    
+
     fetch("/api/send-message", {
         method: "POST",
         headers: {
@@ -41,13 +41,21 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
             message: message
         })
     })
-    .then((d) => d.json())
-    .then((d) => {})
-    .catch((err) => {
-        document.querySelector("#rq-failed").classList.remove("hidden")
-        document.querySelector("#rq-failed").classList.add("bounceright")
-        document.querySelector("#inv-field").classList.add("hidden")
-        setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
-        console.error(err)
-    })
+        .then((d) => d.json())
+        .then((d) => {
+            if (!d.sent) {
+                document.querySelector("#rq-failed").classList.remove("hidden")
+                document.querySelector("#rq-failed").classList.add("bounceright")
+                document.querySelector("#inv-field").classList.add("hidden")
+                setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
+                return
+            }
+        })
+        .catch((err) => {
+            document.querySelector("#rq-failed").classList.remove("hidden")
+            document.querySelector("#rq-failed").classList.add("bounceright")
+            document.querySelector("#inv-field").classList.add("hidden")
+            setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
+            console.error(err)
+        })
 })

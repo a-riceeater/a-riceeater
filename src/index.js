@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require('express');
 const path = require('path');
 
@@ -12,6 +13,10 @@ app.get("/", (req, res) => {
 
 app.get("/license", (req, res) => {
     res.sendFile(path.join(__dirname, "html", "license.html"))
+})
+
+app.post("/api/send-message", (req, res) => {
+    res.send({ sent: true })
 })
 
 app.get("*", (req, res) => {
