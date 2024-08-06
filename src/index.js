@@ -2,6 +2,7 @@ require("dotenv").config()
 const express = require('express');
 const path = require('path');
 const nodemailer = require("nodemailer");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 
@@ -13,6 +14,18 @@ const transporter = nodemailer.createTransport({
         pass: process.env.password
     }
 });
+
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000,
+	limit: 5,
+	standardHeaders: 'draft-7',
+	legacyHeaders: false,
+    message: {
+        sucess: false,
+        rateLimit: true
+    },
+    statusCode: 200
+})
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require("serve-favicon")(path.join(__dirname, 'public', 'logo.png')));
@@ -26,7 +39,7 @@ app.get("/license", (req, res) => {
     res.sendFile(path.join(__dirname, "html", "license.html"))
 })
 
-app.post("/api/send-message", (req, res) => {
+app.post("/api/send-message", limiter, (req, res) => {
     if (!req.body.email || !req.body.name || !req.body.message) return res.send({ sucess: false })
     if (!req.body.email.trim() || !req.body.name.trim() || !req.body.message.trim()) return res.send({ sucess: false })
 

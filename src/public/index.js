@@ -48,13 +48,18 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
         .then((d) => {
             document.querySelector(".ccf-send").classList.remove('disabled');
 
-            if (!d.sent) {
+            if (d.rateLimit) {
+                alert("You have sent too many requests!")
+            }
+
+            if (!d.success) {
                 document.querySelector("#rq-failed").classList.remove("hidden")
                 document.querySelector("#rq-failed").classList.add("bounceright")
                 document.querySelector("#inv-field").classList.add("hidden")
                 setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
                 return
             }
+            
         })
         .catch((err) => {
             document.querySelector("#rq-failed").classList.remove("hidden")
