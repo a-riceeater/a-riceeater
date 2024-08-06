@@ -118,7 +118,17 @@ html {
     text-align: center;
     box-sizing: border-box;
     position: relative; 
-    padding-top: 130px;
+    padding-top: 115px;
+}
+
+.contact-container {
+    width: 100%;
+    height: 45vh;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative; 
+    background-color: #1c1c1c;
+    padding-top: 20px;
 }
 
 .ac-abt, .sc-t {
@@ -167,6 +177,32 @@ html {
 
     .hidden {
         display: none !important;
+    }
+
+    .skills-container > #cont {
+        left: 50% !important;
+        width: 95% !important;
+    }
+
+    .sk-sec {
+        width: 50% !important;
+    }
+
+    .sksec-title {
+        margin-left: 33px !important;
+    }
+
+    .sksec-prog {
+        margin-left: 33px !important;
+    }
+
+    .sk-sec > h1 {
+        text-align: left !important;
+        margin-left: 33px !important;
+    }
+
+    #integration-sk {
+        width: 100% !important;
     }
 }
 
@@ -324,6 +360,7 @@ html {
     float: left;
     display: grid;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .sk-sec > h1 {
@@ -360,4 +397,23 @@ html {
 .sksec-prog > .fill {
     background-color: var(--accent);
     height: 100%;
+}
+
+#skills > #cont > .sk-sec > p {
+    color: lightgray;
+}
+
+#integration-sk {
+    clear: left; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 58%; 
+    text-align: center; 
+    display: block;
+}
+
+#integration-sk > h1 {
+    text-align: center !important;
+    margin: 0;
+    margin-right: 24px;
 }
