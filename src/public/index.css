@@ -225,20 +225,38 @@ html {
     }
 
     .contact-container {
-        height: 75vh !important;
+        height: 80vh !important;
     }
 
 }
 
+@media (min-width: 360px) and (max-width: 480px) {
+ 
+}
+
+@media (max-width: 390px) {
+    .skills-container {
+        height: 125vh !important;
+    }
+}
 
 
-@media (max-width: 350px) {
+
+@media (max-width: 360px) {
     .about-container {
         height: 130vh !important;
     }
 
     .contact-container {
-        height: 80vh !important;
+        height: 95vh !important;
+    }
+
+    .skills-container {
+        height: 160vh !important;
+    }
+
+    .footer {
+        height: 20vh !important;
     }
 }
 
@@ -246,8 +264,32 @@ html {
     .about-container {
         height: 135vh !important;
     }
+
+    .footer {
+        height: 25vh !important;
+    }
+
 }
 
+@media (max-width: 415px) {
+    .skills-container {
+        height: 135vh !important;
+    }
+}
+
+@media (max-height: 700px) {
+    .skills-container {
+        height: 145vh !important;
+    }
+
+    .contact-container {
+        height: 105vh !important;
+    }
+
+    .footer {
+        height: 25vh !important;
+    }
+}
 
 .ac-text.top-margin {
     margin-top: 20px;
@@ -528,6 +570,7 @@ html {
     background-color: rgb(233, 189, 108);
     transition: .25s;
     font-weight: bold;
+    color: black;
 }
 
 .ccf-send:hover {
