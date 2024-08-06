@@ -17,6 +17,7 @@ body {
     overflow: auto;
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -322,7 +323,6 @@ html {
     width: 30%;
     float: left;
     display: grid;
-    justify-self: center;
     margin-top: 20px;
     height: 40%;
 }
@@ -335,11 +335,11 @@ html {
 
 .skills-container > #cont {
     position: absolute;
-    left: 50%;
+    left: 68%;
     transform: translate(-50%, 0%);
     width: 85%;
-    display: flex;
     justify-content: center;
+    height: 80%;
 }
 
 .sksec-title {
