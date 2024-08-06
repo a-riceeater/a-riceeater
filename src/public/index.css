@@ -123,7 +123,7 @@ html {
 
 .contact-container {
     width: 100%;
-    height: 45vh;
+    height: 46vh;
     text-align: center;
     box-sizing: border-box;
     position: relative; 
@@ -208,11 +208,37 @@ html {
     #integration-sk > h1 {
         margin-right: 24px !important;
     }
+
+    .cc-fc {
+        width: 90% !important;
+        grid-template-columns: none !important;
+        flex-flow: column !important;
+        display: flex !important;
+    }
+
+    #ccf-d {
+        order: 1 !important;
+    }
+
+    .cc-form {
+        order: 2 !important;
+    }
+
+    .contact-container {
+        height: 75vh !important;
+    }
+
 }
+
+
 
 @media (max-width: 350px) {
     .about-container {
         height: 130vh !important;
+    }
+
+    .contact-container {
+        height: 80vh !important;
     }
 }
 
@@ -278,6 +304,11 @@ html {
     margin-right: auto;
     margin-top: -15px;
     margin-bottom: 10px;
+    transition: .2s;
+}
+
+.footer > p > a > svg:hover {
+    fill: rgb(233, 204, 149);
 }
 
 .ft-link {
@@ -426,6 +457,7 @@ html {
 
 .cc-t {
     color: white;
+    margin-top: 10px;
 }
 
 .cc-t > svg {
@@ -439,4 +471,140 @@ html {
     vertical-align: middle;
     font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue;
     font-size: 28px;
+}
+
+.cc-form {
+    display: grid;
+    row-gap: 1rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    margin-top: 25px;
+}
+
+#cc-name-inp, #cc-email-inp {
+    width: 90%;
+    height: 40px;
+    border-radius: .375rem;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    padding-left: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue;
+    color: #e5e5e5;
+    font-size: 15px;
+    transition: .25s;
+}
+
+#cc-message-inp {
+    width: 90%;
+    border-radius: .355rem;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    padding-left: 15px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue;
+    color: #e5e5e5;
+    font-size: 15px;
+    height: 160px;
+    transition: .25s;
+}
+
+#cc-name-inp:focus, #cc-email-inp:focus, #cc-message-inp:focus {
+    box-shadow: 3.0px 5.0px 5.0px hsl(0deg 0% 0% / 0.38);
+}
+
+.ccf-send {
+    height: 40px;
+    width: 150px;
+    border-radius: 15px / 15px;
+    cursor: pointer;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue;
+    border: none;
+    background-color: rgb(233, 189, 108);
+    transition: .25s;
+    font-weight: bold;
+}
+
+.ccf-send:hover {
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    background-color: rgb(233, 204, 149);
+}
+
+.cc-fc {
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cc-fc > div, .cc-fc > form {
+    flex-direction: column;
+    display: flex;
+    height: 80%;
+}
+
+.ccf-desc {
+    color: lightgray;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.ccf-desc > svg {
+    height: 25px;
+    width: 25px;
+    fill: lightgray;
+    vertical-align: middle;
+}
+
+.ccf-desc > span {
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.ccf-desc.cfl {
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgray;
+}
+
+.ccf-desc.cfl:hover {
+    color: white;
+}
+
+.ccf-desc.cfl:hover > svg {
+    fill: white;
+} 
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: var(--darkest);
+    border-radius: 5px / 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--dimgray);
+    border-radius: 5px / 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: rgb(40, 40, 40);
+}
+
+textarea::-webkit-scrollbar-track, textarea::-webkit-scrollbar-thumb  {
+    cursor: default;
 }
