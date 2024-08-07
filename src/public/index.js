@@ -27,7 +27,10 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
         document.querySelector("#inv-field").classList.remove("hidden")
         document.querySelector("#inv-field").classList.add("bounceright")
         document.querySelector("#rq-failed").classList.add("hidden")
-        setTimeout(() => document.querySelector("#inv-field").classList.remove("bounceright"), 1000);
+        setTimeout(() => {
+            document.querySelector("#inv-field").classList.remove("bounceright")
+            document.querySelector("#inv-field").classList.add("hidden")
+        }, 2000);
         return
     }
 
@@ -56,17 +59,23 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
                 document.querySelector("#rq-failed").classList.remove("hidden")
                 document.querySelector("#rq-failed").classList.add("bounceright")
                 document.querySelector("#inv-field").classList.add("hidden")
-                setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
+                setTimeout(() => {
+                    document.querySelector("#rq-failed").classList.remove("bounceright")
+                    document.querySelector("#rq-failed").classList.add("hidden")
+                }, 2000);
                 return
             }
 
-            window.location = '/message-sent?email=' + email            
+            window.location = '/message-sent?email=' + email
         })
         .catch((err) => {
             document.querySelector("#rq-failed").classList.remove("hidden")
             document.querySelector("#rq-failed").classList.add("bounceright")
             document.querySelector("#inv-field").classList.add("hidden")
-            setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
+            setTimeout(() => {
+                document.querySelector("#rq-failed").classList.remove("bounceright")
+                document.querySelector("#rq-failed").classList.add("hidden")
+            }, 2000);
             document.querySelector(".ccf-send").classList.remove('disabled');
             console.error(err)
         })

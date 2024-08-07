@@ -238,6 +238,10 @@ html {
     .contact-container {
         height: 90vh !important;
     }
+
+    .about-container {
+        height: 130vh !important;
+    }
 }
 
 
