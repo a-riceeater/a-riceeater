@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Work Sans");
+
+:root {
+    --background: #131a24;
+    --darkest: #2C3D55;
+    --dark: #3E4C5E;
+    --mid: #536271;
+    --dimgray: #6A687A;
+    --lightgray: #84828F;
+    --accent: #958ec4;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
+    overflow: auto;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: var(--accent);
+}
+
+p {
+    color: lightgray;
+}
+
+#rp-em {
+    font-weight: bold;
+}
+
+a {
+    color: rgb(233, 204, 149);
+}

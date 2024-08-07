@@ -59,7 +59,8 @@ document.querySelector(".cc-form").addEventListener("submit", (e) => {
                 setTimeout(() => document.querySelector("#rq-failed").classList.remove("bounceright"), 1000);
                 return
             }
-            
+
+            window.location = '/message-sent?email=' + email            
         })
         .catch((err) => {
             document.querySelector("#rq-failed").classList.remove("hidden")

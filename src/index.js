@@ -42,12 +42,13 @@ app.get("/license", (req, res) => {
 app.post("/api/send-message", limiter, (req, res) => {
     if (!req.body.email || !req.body.name || !req.body.message) return res.send({ sucess: false })
     if (!req.body.email.trim() || !req.body.name.trim() || !req.body.message.trim()) return res.send({ sucess: false })
+    if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(req.body.email.trim())) return
 
     var mailOptions = {
-        from: process.env.user,
-        to: req.body.email,
+        from: process.env.user.trim(),
+        to: req.body.email.trim(),
         subject: 'Recieved message from portfolio',
-        text: `Begin message from "${req.body.name}", ${req.body.email}: \n${req.body.message}`
+        text: `Begin message from "${req.body.name.trim()}", ${req.body.email.trim()}: \n${req.body.message.trim()}`
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
@@ -60,7 +61,11 @@ app.post("/api/send-message", limiter, (req, res) => {
         }
     });
 
-    res.send({ sent: true })
+    res.send({ success: true })
+})
+
+app.get("/message-sent", (req, res) => {
+    res.sendFile(path.join(__dirname, "html", "message-sent.html"))
 })
 
 app.get("*", (req, res) => {
