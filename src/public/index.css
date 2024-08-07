@@ -437,6 +437,8 @@ html {
     left: 50%;
     transform: translate(-50%, 0%);
     border-radius: 10px / 10px;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .sk-sec {
@@ -688,4 +690,21 @@ textarea::-webkit-scrollbar-track, textarea::-webkit-scrollbar-thumb  {
 .ccf-send.disabled {
     cursor: not-allowed;
     opacity: 0.7;
+}
+
+.drop-opt {
+    cursor: pointer;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.drop-opt > span {
+    vertical-align: middle;
+}
+
+.drop-opt > svg {
+    vertical-align: middle;
+    height: 16px;
+    fill: rgb(233, 204, 149)    
 }
