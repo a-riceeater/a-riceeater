@@ -1,1 +1,13 @@
+# robots.txt file for elijahb.xyz
+#    _____ _ _  _       _     
+#   | ____| (_)(_) __ _| |__  
+#   |  _| | | || |/ _` | '_ \ 
+#   | |___| | || | (_| | | | |
+#   |_____|_|_|/ |\__,_|_| |_|
+#            |__/             
+
+User-agent: *
+Disallow: /api/
+Disallow: /message-sent
+
 Sitemap: https://elijahb.xyz/sitemap.txt
