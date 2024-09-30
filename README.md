@@ -11,6 +11,9 @@
 <summary>Github Language Breakdown</summary>
 <br>
 
+<img width="761" alt="image" src="https://github.com/user-attachments/assets/bb9f4d2b-556d-4e9a-b541-56c2cf31305c">
+
+
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=a-riceeater&theme=tokyonight)
 
 </details>
